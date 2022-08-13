@@ -6,6 +6,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     label?: string
     classNameLabel?: string
     styleLabel?: React.CSSProperties
+    ref?: any
 }
 
 export const Button = ({ variant, size, className, style, label, classNameLabel, styleLabel, children, ...props }: ButtonProps) => {

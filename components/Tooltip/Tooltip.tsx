@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface TooltipProps extends React.ButtonHTMLAttributes<HTMLDivElement> {
+interface TooltipProps extends React.HTMLAttributes<HTMLDivElement> {
     tooltipMessage?: string
     isOnHover?: boolean
     isOnClick?: boolean
@@ -20,7 +20,7 @@ export const Tooltip = ({ children, tooltipMessage, isOnClick, isOnHover, defaul
                 setShowTooltip((prev) => !prev)
             }
 
-            if (isOnHover && e.type === 'mouseover') {
+            if ((isOnHover && e.type === 'mouseover') || e.type === 'mouseout') {
                 setShowTooltip((prev) => !prev)
             }
         },
@@ -29,9 +29,13 @@ export const Tooltip = ({ children, tooltipMessage, isOnClick, isOnHover, defaul
 
     return (
         <>
-            {showToolTip && <span className="bg-purple-700 z-50 text-sm rounded-md px-2 top-12 absolute">{tooltipMessage}</span>}
             <div onMouseOver={changeValidator} onMouseOut={changeValidator} onClick={changeValidator}>
                 {children}
+                {showToolTip && (
+                    <span role="tooltip" style={{ maxWidth: '150px' }} className="py-2 bg-purple-500 text-xs rounded-md px-4 top-12 absolute overflow-auto">
+                        {tooltipMessage}
+                    </span>
+                )}
             </div>
         </>
     )

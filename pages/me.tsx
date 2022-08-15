@@ -1,18 +1,17 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import HomeContainer from '../lib/home/HomeContainer'
 
-const Home: NextPage = () => {
+const Me: NextPage = () => {
     return (
         <div>
             <Head>
-                <title>Home page</title>
+                <title>About me</title>
                 <meta name="description" content="My personal website" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <HomeContainer />
+            About me
         </div>
     )
 }
 
-export default Home
+export default Me

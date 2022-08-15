@@ -12,7 +12,7 @@ export interface TextProps {
     children?: React.ReactNode
 }
 
-export const Text = ({ className, style, variant, bold, href, children, ...moreProps }: TextProps) => {
+export const Text = ({ className, style, variant = 'h1', bold, href, children, ...moreProps }: TextProps) => {
     const defineClassName = React.useCallback(() => {
         const defaultCn = className ?? ''
         const defaultBold = `font-${bold ?? 'light'}`

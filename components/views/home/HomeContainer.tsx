@@ -1,4 +1,4 @@
-import { Container } from '../../components'
+import { Container } from '@/components/ui'
 import { PostRecommends } from './PostRecommends'
 import { Introduction } from './Introduction'
 import { FindMe } from './FindMe'

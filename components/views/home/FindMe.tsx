@@ -1,4 +1,4 @@
-import { Text, Card } from '../../components'
+import { Text, Card } from '@/components/ui'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { FaGitlab } from 'react-icons/fa'
 import { BsStackOverflow } from 'react-icons/bs'

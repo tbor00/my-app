@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { Text, Button } from '../../components'
+import { Text, Button } from '../../ui'
 
 export const Introduction = () => {
     const router = useRouter()

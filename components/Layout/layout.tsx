@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import { Button, Tooltip, Text } from '../index'
+import { Button, Tooltip, Text } from '@/components/ui'
 
 export const Navbar = () => {
     const uuid = React.useId()

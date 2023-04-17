@@ -1,3 +1,3 @@
-export * from './layout'
+export * from './common'
 export * from './ui'
-export * from './views'
+export * from './modules'

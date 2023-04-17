@@ -1,17 +1,18 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
-const Projects: NextPage = () => {
+export default function Article() {
+    const router = useRouter()
+    const { slug } = router.query
+
     return (
         <div>
             <Head>
-                <title>Projects</title>
+                <title>Article</title>
                 <meta name="description" content="My personal website" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            Projects
+            {slug}
         </div>
     )
 }
-
-export default Projects

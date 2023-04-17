@@ -11,8 +11,8 @@ export const Introduction = () => {
                 And i am <span className="text-purple-300">Software Engineer.</span>
             </Text>
             <Text variant="h2" className="text-slate-500 text-center mt-2 text-md md:text-lg">
-                I am a software engineer from Argentina, focused on writing scalable and testable code.
-                <br className="hidden md:block" />I specialize in web application development and work with both frontend and backend.
+                Open source enthusiast, Specialized in web applications, Focus on writing scalable, high-quality, and efficient code.
+                {/* <br className="hidden md:block" /> I work on both frontend and backend to create robust solutions. */}
             </Text>
             <div className="flex items-center gap-12 justify-center mt-10">
                 <Button variant="primary" onClick={() => router.push('/me')}>

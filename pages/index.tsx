@@ -1,8 +1,7 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
-import HomeContainer from '@/components/views/home/HomeContainer'
+import { Container, PostRecommends, Introduction, FindMe } from 'components'
 
-const Home: NextPage = () => {
+export default function Home() {
     return (
         <div>
             <Head>
@@ -10,9 +9,15 @@ const Home: NextPage = () => {
                 <meta name="description" content="My personal website" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <HomeContainer />
+            <div>
+                <Container className="flex items-center my-32 h-26 justify-center">
+                    <div>
+                        <Introduction />
+                        <PostRecommends />
+                        <FindMe />
+                    </div>
+                </Container>
+            </div>
         </div>
     )
 }
-
-export default Home

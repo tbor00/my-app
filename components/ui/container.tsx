@@ -1,4 +1,5 @@
 import React, { CSSProperties } from 'react'
+import { composeClasses } from 'lib/classes'
 
 export interface ContainerProps {
     className?: string
@@ -6,10 +7,9 @@ export interface ContainerProps {
     children?: React.ReactNode
 }
 
-
-export const Container = ({className, style, children}: ContainerProps) => {
+export const Container = ({ className, style, children }: ContainerProps) => {
     return (
-        <div className={`container mx-auto ${className?? ''}`} style={style} >
+        <div className={composeClasses('container mx-auto', className)} style={style}>
             {children}
         </div>
     )

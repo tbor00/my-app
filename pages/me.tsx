@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
+import { AboutMe } from 'components/modules/me'
 
-const Me: NextPage = () => {
+export default function Me() {
     return (
         <div>
             <Head>
@@ -9,9 +9,9 @@ const Me: NextPage = () => {
                 <meta name="description" content="My personal website" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            About me
+            <section>
+                <AboutMe />
+            </section>
         </div>
     )
 }
-
-export default Me

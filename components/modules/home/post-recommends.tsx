@@ -1,4 +1,4 @@
-import { Text, Card, Button } from '@/components/ui'
+import { Text, Card, Button } from '../../ui'
 
 interface PostRecommendProps {
     postTitle: string

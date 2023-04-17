@@ -1,49 +1,49 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import { Button, Tooltip, Text } from '@/components/ui'
+import { Button, Tooltip, Text } from '../ui'
+import { composeClasses } from 'lib/classes'
+
+type navLinksType = {
+    name: string
+    description: string
+    href: string
+}
+
+const navLinks: navLinksType[] = [
+    {
+        name: 'Home',
+        description: 'Go to the main page',
+        href: '/'
+    },
+    {
+        name: 'About me',
+        description: 'A little about me to get to know each other better',
+        href: '/me'
+    },
+    // {
+    //     name: 'Projects',
+    //     description: 'Projects in which I participate',
+    //     href: '/projects'
+    // },
+    {
+        name: 'Contributions',
+        description: 'My contributions to the community',
+        href: '/contributions'
+    }
+]
 
 export const Navbar = () => {
-    const uuid = React.useId()
     const router = useRouter()
-
-    type navLinksType = {
-        name: string
-        description: string
-        href: string
-    }
-
-    const navLinks: navLinksType[] = [
-        {
-            name: 'Home',
-            description: 'Go to the main page',
-            href: '/'
-        },
-        {
-            name: 'About me',
-            description: 'A little about me to get to know each other better',
-            href: '/me'
-        },
-        {
-            name: 'Projects',
-            description: 'Projects in which I participate',
-            href: '/projects'
-        },
-        {
-            name: 'Contributions',
-            description: 'My contributions to the community',
-            href: '/contributions'
-        }
-    ]
 
     return (
         <nav style={{ backgroundColor: 'rgb(39, 38, 44)' }} className="shadow-md h-14 flex items-center justify-center">
             <div className="hidden md:flex items-center justify-center gap-6">
-                {navLinks.map((link, index) => (
-                    <React.Fragment key={`link-${index}-${uuid}`}>
+                {navLinks.map((link) => (
+                    <React.Fragment key={link.name}>
                         <Tooltip isOnHover tooltipMessage={link.description}>
                             <Button
                                 variant="buttonLink"
-                                className={link.href === router.pathname ? 'text-purple-300 font-bold' : ''}
+                                className={composeClasses(link.href === router.pathname && 'text-purple-300 font-bold')}
                                 onClick={() => router.push(link.href)}
                             >
                                 <span>{link.name}</span>

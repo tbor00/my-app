@@ -1,16 +1,18 @@
-import { Text, Card } from '@/components/ui'
+import { Text, Card } from '../../ui'
+
+/* Icons */
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { FaGitlab } from 'react-icons/fa'
 import { BsStackOverflow } from 'react-icons/bs'
 
-type SocialNetworkType = {
+type SocialNetwork = {
     name: string
     icon: React.ReactNode
     description: string
     href: string
 }
 
-const listOfSocialNetWorks: SocialNetworkType[] = [
+const listOfSocialNetWorks: SocialNetwork[] = [
     {
         name: 'Github',
         description: 'I use it for personal projects or to contribute to open source',
@@ -37,7 +39,7 @@ const listOfSocialNetWorks: SocialNetworkType[] = [
     }
 ]
 
-const CardSocialNetworks = ({ name, icon, description, href }: SocialNetworkType) => {
+const CardSocialNetworks = ({ name, icon, description, href }: SocialNetwork) => {
     return (
         <Card className="rounded-xl cursor-pointer mb-4 w-72" effectDirection="y" role="link" onClick={() => window.open(href, '__blank')}>
             <div className="flex items-center gap-4">

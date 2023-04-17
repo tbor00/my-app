@@ -9,15 +9,13 @@ export default function Home() {
                 <meta name="description" content="My personal website" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div>
-                <Container className="flex items-center my-32 h-26 justify-center">
-                    <div>
-                        <Introduction />
-                        <PostRecommends />
-                        <FindMe />
-                    </div>
-                </Container>
-            </div>
+            <Container className="flex items-center my-32 h-26 justify-center">
+                <div>
+                    <Introduction />
+                    <PostRecommends />
+                    <FindMe />
+                </div>
+            </Container>
         </div>
     )
 }

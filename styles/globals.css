@@ -8,7 +8,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif; 
+  font-family: 'Inter', sans-serif;
 }
 
 a {
@@ -31,8 +31,8 @@ a {
 }
 
 .glass-purple {
-background: rgba(126, 34, 206, 0.052);
-backdrop-filter: blur(7px);
--webkit-backdrop-filter: blur(7px);
-border: 1px solid rgba(126, 34, 206, 1);
+  background: rgba(126, 34, 206, 0.052);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(126, 34, 206, 1);
 }
